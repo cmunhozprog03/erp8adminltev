@@ -14,7 +14,7 @@ return [
     |
     */
 
-    'title' => 'AdminLTE 3',
+    'title' => 'ERP EPB',
     'title_prefix' => '',
     'title_postfix' => '',
 
@@ -45,12 +45,12 @@ return [
     |
     */
 
-    'logo' => '<b>Admin</b>LTE',
+    'logo' => '<b>ERP</b>',
     'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
-    'logo_img_alt' => 'AdminLTE',
+    'logo_img_alt' => 'ERP',
 
     /*
     |--------------------------------------------------------------------------
@@ -126,9 +126,9 @@ return [
     'classes_content_wrapper' => '',
     'classes_content_header' => '',
     'classes_content' => '',
-    'classes_sidebar' => 'sidebar-dark-primary elevation-4',
+    'classes_sidebar' => 'sidebar-dark-secondary elevation-4',
     'classes_sidebar_nav' => '',
-    'classes_topnav' => 'navbar-white navbar-light',
+    'classes_topnav' => 'navbar-dark navbar-dark',
     'classes_topnav_nav' => 'navbar-expand',
     'classes_topnav_container' => 'container',
 
@@ -187,7 +187,7 @@ return [
     */
 
     'use_route_url' => false,
-    'dashboard_url' => 'home',
+    'dashboard_url' => '/',
     'logout_url' => 'logout',
     'login_url' => 'login',
     'register_url' => 'register',
@@ -235,11 +235,10 @@ return [
             'can'  => 'manage-blog',
         ],
         [
-            'text'        => 'pages',
-            'url'         => 'admin/pages',
-            'icon'        => 'far fa-fw fa-file',
-            'label'       => 4,
-            'label_color' => 'success',
+            'text'        => 'Dashboard',
+            'route'         => 'admin.home',
+            'icon'        => 'fas fa-fw fa-tachometer-alt ',
+            
         ],
         ['header' => 'account_settings'],
         [
@@ -253,12 +252,13 @@ return [
             'icon' => 'fas fa-fw fa-lock',
         ],
         [
-            'text'    => 'multilevel',
-            'icon'    => 'fas fa-fw fa-share',
+            'text'    => 'Cadastros',
+            'icon'    => 'fas fa-fw fa-cubes',
             'submenu' => [
                 [
-                    'text' => 'level_one',
-                    'url'  => '#',
+                    'text' => 'Empresas',
+                    'route'  => 'admin.companies.index',
+                    'icon' => 'fas fa-fw fa-building'
                 ],
                 [
                     'text'    => 'level_one',
