@@ -1,25 +1,14 @@
+
 @extends('adminlte::page')
 
 @section('title', 'ERP Dashboard')
 
-@section('content_header')
-    <h1>Empresas</h1>
-@stop
+
 
 @section('content')
-    @if ($companies->count())
-        <div class="w3-card-4">
-          <div class="table-responsive">
-            <table class="table table-striped table-hover table-bordered">
-
-            </table>
-          </div>
-        </div>
-    @else
-        <div class="w3-card-4 alert alert-secondary p-3">
-          Nenhum registro encontrado.
-        </div>
-    @endif
+   
+  @livewire('companies.companies-index')
+   
 @stop
 
 @section('css')
@@ -28,5 +17,6 @@
 @stop
 
 @section('js')
+    @livewireScripts
     <script> console.log('Hi!'); </script>
 @stop
